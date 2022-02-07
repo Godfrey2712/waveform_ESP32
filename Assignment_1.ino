@@ -4,7 +4,7 @@ const int ledPin1 = 15;      // the number of the LED pin 1
 const int buttonPin2 = 23;     // the number of the pushbutton pin 2
 const int ledPin2 = 21;      // the number of the LED pin 2
 #define a 1200
-#define b 1300
+#define b 1500
 #define c 6
 #define d 5000
 #define a1 5000
