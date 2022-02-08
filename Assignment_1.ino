@@ -3,8 +3,8 @@ const int buttonPin1 = 22;     // the number of the pushbutton pin 1
 const int ledPin1 = 15;      // the number of the LED pin 1
 const int buttonPin2 = 23;     // the number of the pushbutton pin 2
 const int ledPin2 = 21;      // the number of the LED pin 2
-#define a 1200
-#define b 1500
+#define a 1000
+#define b 1300
 #define c 6
 #define d 5000
 #define a1 5000
@@ -12,7 +12,7 @@ const int ledPin2 = 21;      // the number of the LED pin 2
 #define B 500 //Signal of B
 
 // variables will change:
-int buttonState = 0;         // variable for reading the pushbutton1 status
+int buttonState = 1;         // variable for reading the pushbutton1 status
 //int buttonState2 = 0;         // variable for reading the pushbutton2 status
 
 void setup() {
@@ -23,13 +23,13 @@ void setup() {
   //initialize the switches as inputs
   pinMode(buttonPin1, INPUT);
   pinMode(buttonPin2, INPUT);
-  
+
 
 }
 
 void loop() {
-   if (digitalRead(buttonPin1) == LOW && digitalRead(buttonPin2) == LOW) {
-    {
+      buttonState = digitalRead(buttonPin1);
+   if (buttonState == LOW && digitalRead(buttonPin2) == LOW) {
       //digitalWrite(ledPin1, HIGH);
       digitalWrite(ledPin2, HIGH);
       delay(B);
@@ -50,8 +50,12 @@ void loop() {
       delay(b+d);  
     }
 
-   if (digitalRead(buttonPin1) == LOW && digitalRead(buttonPin2) == HIGH) {
-    {
+   else if (buttonState == HIGH && digitalRead(buttonPin2) == LOW) {
+    digitalWrite(ledPin1, LOW);
+    digitalWrite(ledPin2, LOW);
+   }
+    
+   else if(buttonState == LOW && digitalRead(buttonPin2) == HIGH) {
       digitalWrite(ledPin2, HIGH);
       delay(B);
       digitalWrite(ledPin2, LOW);
@@ -68,13 +72,5 @@ void loop() {
       digitalWrite(ledPin1, LOW);
       delay(b+d);  
     }
-  }   
-  }
-else if(digitalRead(buttonPin1) == HIGH && digitalRead(buttonPin2) == LOW); {
-    {
-      digitalWrite(ledPin1, LOW);
-      digitalWrite(ledPin2, LOW);
-    }
-    }
+     
       }
-  
