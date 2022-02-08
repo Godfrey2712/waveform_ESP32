@@ -49,11 +49,6 @@ void loop() {
       digitalWrite(ledPin1, LOW);
       delay(b+d);  
     }
-
-   else if (buttonState == HIGH && digitalRead(buttonPin2) == LOW) {
-    digitalWrite(ledPin1, LOW);
-    digitalWrite(ledPin2, LOW);
-   }
     
    else if(buttonState == LOW && digitalRead(buttonPin2) == HIGH) {
       digitalWrite(ledPin2, HIGH);
@@ -71,6 +66,16 @@ void loop() {
       delay(a);
       digitalWrite(ledPin1, LOW);
       delay(b+d);  
+    }
+
+     else if (buttonState == HIGH && digitalRead(buttonPin2) == LOW) {
+    digitalWrite(ledPin1, LOW);
+    digitalWrite(ledPin2, LOW);
+   }
+
+   else {
+    digitalWrite(ledPin1, LOW);
+    digitalWrite(ledPin2, LOW);
     }
      
       }
