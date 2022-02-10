@@ -16,7 +16,6 @@ const int ledPin2 = 21;        // the number of the LED pin 2 for Signal B
 #define a5 1150  //6th pulse from signal A
 #define B 50    //Time of Signal B being in the HIGH state
 
-// variables will change:
 int buttonState = 1;         // variable for reading the pushbutton1 status
 
 void setup() {
