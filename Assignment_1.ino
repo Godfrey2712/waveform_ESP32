@@ -14,7 +14,7 @@ const int ledPin2 = 21;        // the number of the LED pin 2 for Signal B
 #define a3 1050  //4th pulse from signal A
 #define a4 1100  //5th pulse from signal A
 #define a5 1150  //6th pulse from signal A
-#define B 500    //Time of Signal B being in the HIGH state
+#define B 50    //Time of Signal B being in the HIGH state
 
 // variables will change:
 int buttonState = 1;         // variable for reading the pushbutton1 status
@@ -33,63 +33,63 @@ void loop() {
        //Operating in Normal State
    if (buttonState == LOW && digitalRead(buttonPin2) == LOW) {
       digitalWrite(ledPin2, HIGH);
-      delay(B);
+      delayMicroseconds(B);
       digitalWrite(ledPin2, LOW);
       digitalWrite(ledPin1, HIGH);
-      delay(a);
+      delayMicroseconds(a);
       digitalWrite(ledPin1,LOW);
-      delay(b);
+      delayMicroseconds(b);
       digitalWrite(ledPin1, HIGH);
-      delay(a1);
+      delayMicroseconds(a1);
       digitalWrite(ledPin1, LOW);
-      delay(b);
+      delayMicroseconds(b);
       digitalWrite(ledPin1, HIGH);
-      delay(a2);
+      delayMicroseconds(a2);
       digitalWrite(ledPin1, LOW);
-      delay(b);
+      delayMicroseconds(b);
       digitalWrite(ledPin1, HIGH);
-      delay(a3);
+      delayMicroseconds(a3);
       digitalWrite(ledPin1, LOW);
-      delay(b);
+      delayMicroseconds(b);
       digitalWrite(ledPin1, HIGH);
-      delay(a4);
+      delayMicroseconds(a4);
       digitalWrite(ledPin1, LOW);
-      delay(b);
+      delayMicroseconds(b);
       digitalWrite(ledPin1, HIGH);
-      delay(a5);
+      delayMicroseconds(a5);
       digitalWrite(ledPin1, LOW);
-      delay(b+d);  
+      delayMicroseconds(b+d);  
     }
     
     //Operating in MODE State
    else if(buttonState == LOW && digitalRead(buttonPin2) == HIGH) {
       digitalWrite(ledPin2, HIGH);
-      delay(B);
+      delayMicroseconds(B);
       digitalWrite(ledPin2, LOW);
       digitalWrite(ledPin1, HIGH);
-      delay(a5);
+      delayMicroseconds(a5);
       digitalWrite(ledPin1,LOW);
-      delay(b);
+      delayMicroseconds(b);
       digitalWrite(ledPin1, HIGH);
-      delay(a4);
+      delayMicroseconds(a4);
       digitalWrite(ledPin1, LOW);
-      delay(b);
+      delayMicroseconds(b);
       digitalWrite(ledPin1, HIGH);
-      delay(a3);
+      delayMicroseconds(a3);
       digitalWrite(ledPin1, LOW);
-      delay(b);
+      delayMicroseconds(b);
       digitalWrite(ledPin1, HIGH);
-      delay(a2);
+      delayMicroseconds(a2);
       digitalWrite(ledPin1, LOW);
-      delay(b);
+      delayMicroseconds(b);
       digitalWrite(ledPin1, HIGH);
-      delay(a1);
+      delayMicroseconds(a1);
       digitalWrite(ledPin1, LOW);
-      delay(b);
+      delayMicroseconds(b);
       digitalWrite(ledPin1, HIGH);
-      delay(a);
+      delayMicroseconds(a);
       digitalWrite(ledPin1, LOW);
-      delay(b+d);
+      delayMicroseconds(b+d);
     }
     
    //Turning off the circuit/signal flow
